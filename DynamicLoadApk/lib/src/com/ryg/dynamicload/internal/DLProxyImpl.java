@@ -97,10 +97,11 @@ public class DLProxyImpl {
         launchTargetActivity();
     }
 
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+//    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     protected void launchTargetActivity() {
         try {
             Class<?> localClass = getClassLoader().loadClass(mClass);
+            //构造一个类的实例
             Constructor<?> localConstructor = localClass.getConstructor(new Class[] {});
             Object instance = localConstructor.newInstance(new Object[] {});
             mRemoteActivity = (DLPlugin) instance;

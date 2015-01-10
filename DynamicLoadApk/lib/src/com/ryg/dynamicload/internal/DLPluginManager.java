@@ -157,7 +157,7 @@ public class DLPluginManager {
      * @return One of below: {@link #START_RESULT_SUCCESS} {@link #START_RESULT_NO_PKG}
      *         {@link #START_RESULT_NO_CLASS} {@link #START_RESULT_TYPE_ERROR}
      */
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+//    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public int startPluginActivityForResult(Context context, DLIntent dlIntent, int requestCode) {
         if (mFrom == DLConstants.FROM_INTERNAL) {
             dlIntent.setClassName(context, dlIntent.getPluginClass());
